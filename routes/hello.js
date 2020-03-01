@@ -18,7 +18,7 @@ router.get('/',(req, res, next) => {
         res2.on('end', () => {
             parseString(body.trim(), (err, result) => {
                 var data = {
-                    title: 'Hello!',
+                    title: '東京メトロのリリースニュースを表示します',
                     content: result.rss.channel[0].item
                 };
                 res.render('hello', data);
